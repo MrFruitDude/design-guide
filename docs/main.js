@@ -5,10 +5,26 @@
   const toggle = document.querySelector('.nav-toggle');
   const list = document.getElementById('nav');
   if(toggle && list){
-    toggle.addEventListener('click', ()=>{
+    const close = ()=>{ list.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
+    toggle.addEventListener('click', (e)=>{
+      e.stopPropagation();
       const open = list.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
     });
+    // Improve tap target by allowing Enter/Space to toggle
+    toggle.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle.click(); }
+    });
+    // Close when clicking outside
+    document.addEventListener('click', (e)=>{
+      if(!list.classList.contains('open')) return;
+      if(e.target === list || list.contains(e.target) || e.target === toggle) return;
+      close();
+    });
+    // Close on ESC
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+    // Close after selecting a link (and maintain scroll to target)
+    list.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{ close(); }));
   }
 
   // Active section highlight
