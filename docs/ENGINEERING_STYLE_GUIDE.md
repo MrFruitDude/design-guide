@@ -75,7 +75,7 @@ Note: The canonical definitions for variables and their dark‑mode overrides li
 - Empathy: Offer recovery paths and explain consequences in plain language.
 
 ## 8) Working With Tokens (Implementation Guidance)
-- Single source: Import docs/tokens.css first. Use token variables for color, type, spacing, radius, and motion.
+- Single source: Use token variables for color, type, spacing, radius, and motion.
 - No ad‑hoc values: Avoid hardcoding brand or neutral colors. Use provided state colors where needed.
 - Consistent surfaces: Use shared shadows and radii for elevation. Keep a restrained, coherent visual rhythm.
 
@@ -93,8 +93,3 @@ Copy:
 - [ ] Plain language; minimal jargon
 - [ ] Clear recovery paths and expectations
 
-## 10) Traceability
-- Tokens (authoritative): docs/tokens.css
-- Style rules and utilities: docs/styles.css
-- Product and platform notes: docs/STYLE_GUIDE.md
-- Reference site content: docs/index.html (for examples only; do not treat component layout rules as universal)
