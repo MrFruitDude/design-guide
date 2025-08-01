@@ -64,11 +64,13 @@ img{max-width:100%; display:block}
 .tokens li.has-color > .left{display:flex;align-items:center;gap:8px}
 
 /* Downloadables list spacing */
-.download-list{list-style:none;padding:0;margin:0;display:grid;gap:var(--space-4)}
-.download-list li{margin:0}
-.download-list li .btn{width:100%; text-align:left}
+.download-list{list-style:none;padding:0;margin:0;display:grid;gap:var(--space-4);row-gap:var(--space-4)}
+.download-list > li{margin:0 0 var(--space-4) 0}
+.download-list > li:last-child{margin-bottom:0}
+.download-list > li .btn{width:100%; text-align:left}
 @media (max-width: 720px){
-  .download-list{gap:var(--space-5)}
+  .download-list{gap:var(--space-5);row-gap:var(--space-5)}
+  .download-list > li{margin-bottom:var(--space-5)}
 }
 
 .principle h3{font-family:var(--font-display);font-size:var(--size-h2);margin:.2em 0 .4em}
