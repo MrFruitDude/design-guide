@@ -5,11 +5,12 @@
   const toggle = document.querySelector('.nav-toggle');
   const list = document.getElementById('nav');
   if(toggle && list){
-    const close = ()=>{ list.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); };
+    const close = ()=>{ list.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.focus(); };
     toggle.addEventListener('click', (e)=>{
       e.stopPropagation();
       const open = list.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
+      if(open){ const first = list.querySelector('a'); if(first) first.focus(); }
     });
     // Improve tap target by allowing Enter/Space to toggle
     toggle.addEventListener('keydown', (e)=>{
@@ -45,11 +46,24 @@
   }, { rootMargin: '-30% 0px -60% 0px', threshold: 0.01 });
   sections.forEach(sec => io.observe(sec));
 
-  // Tabs demo
-  document.querySelectorAll('.tabs .tab').forEach((tab)=>{
-    tab.addEventListener('click',()=>{
-      tab.parentElement.querySelectorAll('.tab').forEach(t=>t.classList.remove('is-active'));
-      tab.classList.add('is-active');
+  // Tabs demo with ARIA
+  document.querySelectorAll('.tabs').forEach((tablist)=>{
+    const tabs = Array.from(tablist.querySelectorAll('.tab'));
+    const activate = (idx)=>{
+      tabs.forEach((t,i)=>{
+        const active = i===idx;
+        t.classList.toggle('is-active', active);
+        t.setAttribute('aria-selected', String(active));
+        t.tabIndex = active ? 0 : -1;
+      });
+      tabs[idx].focus();
+    };
+    tabs.forEach((tab,i)=>{
+      tab.addEventListener('click',()=>activate(i));
+      tab.addEventListener('keydown',(e)=>{
+        if(e.key==='ArrowRight'){ e.preventDefault(); activate((i+1)%tabs.length);}
+        if(e.key==='ArrowLeft'){ e.preventDefault(); activate((i-1+tabs.length)%tabs.length);}
+      });
     });
   });
 
@@ -61,15 +75,17 @@
     document.documentElement.style.setProperty('--dur-fast', '0ms');
   }
 
-  // Fun hover wiggle for motion demo
-  document.querySelectorAll('[data-wiggle]').forEach((el)=>{
-    el.addEventListener('mouseenter',()=>{el.animate([
-      { transform: 'translateY(0) rotate(0)' },
-      { transform: 'translateY(-1px) rotate(-1deg)' },
-      { transform: 'translateY(0) rotate(0.6deg)' },
-      { transform: 'translateY(0) rotate(0)' }
-    ], { duration: 450, easing: 'ease-out' });});
-  });
+  // Fun hover wiggle for motion demo (respect reduced motion)
+  if(!prefersReduced){
+    document.querySelectorAll('[data-wiggle]').forEach((el)=>{
+      el.addEventListener('mouseenter',()=>{el.animate([
+        { transform: 'translateY(0) rotate(0)' },
+        { transform: 'translateY(-1px) rotate(-1deg)' },
+        { transform: 'translateY(0) rotate(0.6deg)' },
+        { transform: 'translateY(0) rotate(0)' }
+      ], { duration: 450, easing: 'ease-out' });});
+    });
+  }
 
   // Click-to-copy: entire swatch card
   document.querySelectorAll('.swatch').forEach((card)=>{

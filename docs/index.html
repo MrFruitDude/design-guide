@@ -41,17 +41,17 @@
     </div>
   </aside>
 
-  <main id="content" class="site-main with-sidenav">
-    <section class="hero">
+  <main id="content" class="site-main with-sidenav" tabindex="-1">
+    <header class="hero" role="banner">
       <div class="container">
-        <h2 class="display">Design with warmth, clarity, and trust.</h2>
+        <h1 class="display">Design with warmth, clarity, and trust.</h1>
         <p class="lead">This guide defines our identity and offers practical standards to build products that feel unmistakably Lumo.</p>
         <div class="cta-row">
           <a class="btn primary" href="#components">Explore components</a>
           <a class="btn ghost" href="#identity">Start with identity</a>
         </div>
       </div>
-    </section>
+    </header>
 
     <section id="identity" class="section">
       <div class="container two-col">
@@ -180,10 +180,10 @@
           </div>
           <div class="demo">
             <h4>Navigation</h4>
-            <nav class="tabs" aria-label="Example tabs">
-              <button class="tab is-active">Overview</button>
-              <button class="tab">Specs</button>
-              <button class="tab">Usage</button>
+            <nav class="tabs" aria-label="Example tabs" role="tablist">
+              <button class="tab is-active" role="tab" aria-selected="true" tabindex="0">Overview</button>
+              <button class="tab" role="tab" aria-selected="false" tabindex="-1">Specs</button>
+              <button class="tab" role="tab" aria-selected="false" tabindex="-1">Usage</button>
             </nav>
           </div>
         </div>
@@ -196,7 +196,7 @@
           <h3 class="eyebrow">Iconography</h3>
           <h2>Simple, friendly forms</h2>
           <p>Icons are rounded, 2px strokes, and solid fills for small sizes. Maintain consistent metaphor and simplicity.</p>
-          <p class="note"><a class="btn ghost" href="assets/app_icons.zip" download>Download all app icons (.zip)</a></p>
+          <p class="note"><a class="btn ghost" href="app_icons/" target="_blank" rel="noopener">Browse app icons</a></p>
         </div>
         <aside>
           <div class="icon-grid">
