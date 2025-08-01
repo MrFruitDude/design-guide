@@ -73,6 +73,8 @@
     document.documentElement.style.setProperty('--dur-slow', '0ms');
     document.documentElement.style.setProperty('--dur-med', '0ms');
     document.documentElement.style.setProperty('--dur-fast', '0ms');
+    // Also disable wiggle
+    document.querySelectorAll('[data-wiggle]').forEach(el => el.removeAttribute('data-wiggle'));
   }
 
   // Fun hover wiggle for motion demo (respect reduced motion)
