@@ -58,11 +58,16 @@ img{max-width:100%; display:block}
 .tokens{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .tokens li{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .tokens b{font-variant-numeric:tabular-nums}
+/* Color swatch for At-a-glance tokens */
+.tokens .swatch{width:14px;height:14px;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);flex:0 0 14px}
+.tokens li.has-color{gap:8px}
+.tokens li.has-color > .left{display:flex;align-items:center;gap:8px}
 
 .principle h3{font-family:var(--font-display);font-size:var(--size-h2);margin:.2em 0 .4em}
 
 .type-specimens{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);align-items:start}
 .caveat{font-family:var(--font-display);font-size:var(--size-h1);line-height:var(--lh-h1);margin:.1em 0}
+.caveat-inline{font-family:var(--font-display)}
 .note{font-size:var(--size-small);color:var(--muted)}
 .type-scale{margin-top:var(--space-5)}
 .type-scale ul{columns:2;gap:var(--space-5);padding:0;margin:var(--space-3) 0 0;list-style:none}
