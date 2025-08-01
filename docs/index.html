@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Lumo Design Guide</title>
+  <meta name="description" content="Lumo Design Guide – identity, principles, components, and best practices." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="../assets/lumo-bear.png" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <aside class="side-nav" aria-label="Primary">
+    <div class="side-inner">
+      <a class="brand block" href="#top">
+        <img src="../assets/lumo-bear.png" alt="Lumo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">Lumo</span>
+          <span class="brand-tag">Design Guide</span>
+        </div>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">☰</button>
+        <ul id="nav" class="nav-list vertical">
+          <li><a href="#identity">Identity</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#typography">Type</a></li>
+          <li><a href="#color">Color</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#iconography">Icons</a></li>
+          <li><a href="#motion">Motion</a></li>
+          <li><a href="#accessibility">A11y</a></li>
+          <li><a href="#voice">Voice</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main id="content" class="site-main with-sidenav">
+    <section class="hero">
+      <div class="container">
+        <h2 class="display">Design with warmth, clarity, and trust.</h2>
+        <p class="lead">This guide defines our identity and offers practical standards to build products that feel unmistakably Lumo.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#components">Explore components</a>
+          <a class="btn ghost" href="#identity">Start with identity</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="identity" class="section">
+      <div class="container two-col">
+        <div>
+          <h3 class="eyebrow">Identity</h3>
+          <h2>Brand foundations</h2>
+          <p>Our brand blends human warmth with reliable utility. We favor clear layouts, generous white space, and thoughtful motion. Caveat adds a human note in headlines; Inter ensures functional clarity everywhere else.</p>
+          <ul class="checks">
+            <li>Human, not cutesy.</li>
+            <li>Optimistic, not naive.</li>
+            <li>Helpful, never pushy.</li>
+          </ul>
+        </div>
+        <aside class="card">
+          <h4>At-a-glance</h4>
+          <ul class="tokens">
+            <li><span>Brand color</span><b>#EE8380</b></li>
+            <li><span>Light bg</span><b>#F5EFE8</b></li>
+            <li><span>Dark bg</span><b>#1F1F1F</b></li>
+            <li><span>Fonts</span><b>Caveat / Inter</b></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="principles" class="section alt">
+      <div class="container grid-3">
+        <article class="card principle">
+          <h3>Clarity first</h3>
+          <p>Prefer obvious choices, strong hierarchy, and consistent affordances. Remove anything that doesn’t help someone decide or act.</p>
+        </article>
+        <article class="card principle">
+          <h3>Warm minimalism</h3>
+          <p>Use generous spacing, soft contrast, and the brand color as a highlight – not paint. Motion should guide, not decorate.</p>
+        </article>
+        <article class="card principle">
+          <h3>Trust by default</h3>
+          <p>Accessible by design. Communicate state clearly. Always offer undo or a safe path back.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="typography" class="section">
+      <div class="container">
+        <h3 class="eyebrow">Typography</h3>
+        <h2>Voice through type</h2>
+        <p>Headlines and subheads use Caveat for a distinctive, human touch. Body, UI, and data use Inter for readability and versatility.</p>
+
+        <div class="type-specimens">
+          <div class="specimen">
+            <h1 class="caveat">A friendly headline in Caveat</h1>
+            <p class="note">Use Caveat for H1–H3 and expressive callouts. Keep line length short.</p>
+          </div>
+          <div class="specimen">
+            <h3>Inter for workhorse UI</h3>
+            <p>Inter supports dense layouts, data tables, and long-form reading. Use 1.5 line-height for paragraphs.</p>
+          </div>
+        </div>
+
+        <div class="type-scale card">
+          <h4>Type scale</h4>
+          <ul>
+            <li><b>Display</b> 48/56 Caveat</li>
+            <li><b>H1</b> 36/44 Caveat</li>
+            <li><b>H2</b> 28/36 Caveat</li>
+            <li><b>H3</b> 22/28 Inter</li>
+            <li><b>Body</b> 16/24 Inter</li>
+            <li><b>Small</b> 14/20 Inter</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="color" class="section alt">
+      <div class="container">
+        <h3 class="eyebrow">Color</h3>
+        <h2>Light and dark palettes</h2>
+        <p>We design light-first with a soft paper tone; dark mode is deep charcoal. The brand color is warm coral. Use color to signal state and highlight key actions.</p>
+        <div class="swatches">
+          <div class="swatch" style="--swatch:#F5EFE8"><span>Light bg</span><b>#F5EFE8</b></div>
+          <div class="swatch" style="--swatch:#1F1F1F"><span>Dark bg</span><b>#1F1F1F</b></div>
+          <div class="swatch" style="--swatch:#EE8380"><span>Brand</span><b>#EE8380</b></div>
+          <div class="swatch" style="--swatch:#0EA5E9"><span>Info</span><b>#0EA5E9</b></div>
+          <div class="swatch" style="--swatch:#10B981"><span>Success</span><b>#10B981</b></div>
+          <div class="swatch" style="--swatch:#F59E0B"><span>Warning</span><b>#F59E0B</b></div>
+          <div class="swatch" style="--swatch:#EF4444"><span>Error</span><b>#EF4444</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="section">
+      <div class="container">
+        <h3 class="eyebrow">Components</h3>
+        <h2>UI building blocks</h2>
+        <div class="component-gallery">
+          <div class="demo">
+            <h4>Buttons</h4>
+            <div class="row gap">
+              <button class="btn primary">Primary</button>
+              <button class="btn">Default</button>
+              <button class="btn ghost">Ghost</button>
+              <button class="btn danger">Danger</button>
+            </div>
+          </div>
+          <div class="demo">
+            <h4>Inputs</h4>
+            <div class="row gap">
+              <label class="field"><span>Label</span><input placeholder="Type here"/></label>
+              <label class="field error"><span>Email</span><input type="email" placeholder="name@domain.com" aria-invalid="true" aria-describedby="email-help"/><small id="email-help"><b>!</b> Enter a valid email</small></label>
+              <label class="switch"><input type="checkbox"/><span></span><em>Toggle</em></label>
+            </div>
+          </div>
+          <div class="demo">
+            <h4>Cards</h4>
+            <div class="row gap">
+              <article class="card">
+                <h5>Card title</h5>
+                <p>Concise supportive copy for the card content area.</p>
+                <div class="row"><button class="btn small">Action</button></div>
+              </article>
+              <article class="card elevated">
+                <h5>Elevated card</h5>
+                <p>Use sparingly to emphasize interactive areas.</p>
+              </article>
+            </div>
+          </div>
+          <div class="demo">
+            <h4>Navigation</h4>
+            <nav class="tabs" aria-label="Example tabs">
+              <button class="tab is-active">Overview</button>
+              <button class="tab">Specs</button>
+              <button class="tab">Usage</button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iconography" class="section alt">
+      <div class="container two-col">
+        <div>
+          <h3 class="eyebrow">Iconography</h3>
+          <h2>Simple, friendly forms</h2>
+          <p>Icons are rounded, 2px strokes, and solid fills for small sizes. Maintain consistent metaphor and simplicity.</p>
+        </div>
+        <aside>
+          <div class="icon-grid">
+            <img src="../app_icons/heart.png" alt="heart icon">
+            <img src="../app_icons/sparkles.png" alt="sparkles icon">
+            <img src="../app_icons/chef_hat.png" alt="chef hat icon">
+            <img src="../app_icons/shopping_cart.png" alt="shopping cart icon">
+            <img src="../app_icons/calendar.png" alt="calendar icon">
+            <img src="../app_icons/brain.png" alt="brain icon">
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="motion" class="section">
+      <div class="container">
+        <h3 class="eyebrow">Motion</h3>
+        <h2>Purposeful, soft motion</h2>
+        <p>Use 150–250ms durations with ease-out curves for entrances and ease-in for exits. Prefer micro-interactions and subtle parallax.</p>
+        <div class="motion-demo card">
+          <button class="btn primary" data-wiggle>Hover me</button>
+          <div class="loader" aria-label="Loading" role="status"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="accessibility" class="section alt">
+      <div class="container grid-3">
+        <article class="card">
+          <h4>Contrast</h4>
+          <p>Body text meets WCAG AA in both themes. Test combinations with interactive states.</p>
+        </article>
+        <article class="card">
+          <h4>Structure</h4>
+          <p>Use semantic HTML. Preserve focus order and visible focus states. Provide skip links.</p>
+        </article>
+        <article class="card">
+          <h4>Motion sensitivity</h4>
+          <p>Respect reduce-motion preferences and provide non-animated alternatives.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="voice" class="section">
+      <div class="container two-col">
+        <div>
+          <h3 class="eyebrow">Voice & Tone</h3>
+          <h2>Warm, direct, helpful</h2>
+          <p>Write like a helpful teammate. Prefer verbs to nouns. Choose everyday words. Be concise and kind.</p>
+          <ul class="do-dont">
+            <li><b>Do</b> “Save changes”</li>
+            <li><b>Do</b> “We’ll email you a receipt”</li>
+            <li><b>Don’t</b> “Persist configuration”</li>
+          </ul>
+        </div>
+        <aside class="card">
+          <h4>Microcopy checklist</h4>
+          <ul class="checks">
+            <li>State the action first.</li>
+            <li>Prefer active voice.</li>
+            <li>Show empathy. Offer recovery.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="resources" class="section alt">
+      <div class="container two-col">
+        <div>
+          <h3 class="eyebrow">Resources</h3>
+          <h2>Downloadables</h2>
+          <ul>
+            <li><a href="./tokens.css" download>Design tokens (CSS)</a></li>
+            <li><a href="./print.css" download>Print stylesheet</a></li>
+            <li><a href="../STYLE_GUIDE.md">Engineering style guide</a></li>
+          </ul>
+        </div>
+        <aside class="card">
+          <h4>Contributing</h4>
+          <p>Submit improvements via pull request. Keep examples minimal and accessible.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Lumo. Built for GitHub Pages.</p>
+      <a href="./404.html">404</a>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>

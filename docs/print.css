@@ -1,0 +1,7 @@
+@page{margin:18mm}
+:root{--text:#000;--bg:#fff;--brand:#EE8380}
+body{font:12pt/1.5 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;color:#111}
+h1,h2,h3{font-family:Caveat, Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+.section{break-inside:avoid}
+.card{border:1pt solid #ddd}
+.swatch::before{box-shadow:none}
