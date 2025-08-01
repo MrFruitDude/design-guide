@@ -218,7 +218,11 @@
         <p>Use 150–250ms durations with ease-out curves for entrances and ease-in for exits. Prefer micro-interactions and subtle parallax.</p>
         <div class="motion-demo card">
           <button class="btn primary" data-wiggle>Hover me</button>
-          <div class="loader" aria-label="Loading" role="status"><span></span></div>
+          <div class="typing" role="status" aria-label="Typing indicator" aria-live="polite">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+          </div>
         </div>
       </div>
     </section>
