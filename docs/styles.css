@@ -179,8 +179,9 @@ button.btn.ghost:hover,
   .swatches{grid-template-columns:repeat(4,1fr)}
 }
 @media (max-width: 900px){
-  .side-nav{inset:auto 12px 12px 12px; width:auto}
-  .site-main.with-sidenav{padding-left:var(--space-6)}
+  .side-nav{position:static; inset:auto; width:100%; margin:0; z-index:auto}
+  .side-inner{position:relative; top:0; border:none; box-shadow:none; background:transparent; backdrop-filter:none; border-radius:0; padding:14px var(--space-6)}
+  .site-main.with-sidenav{padding-left:0}
   .nav-toggle{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-width:44px; min-height:44px; padding:10px 12px; cursor:pointer; position:relative; z-index:30}
   .nav-toggle:focus{outline:2px solid color-mix(in oklab, var(--brand) 55%, transparent); outline-offset:2px}
 
