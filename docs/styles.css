@@ -63,6 +63,10 @@ img{max-width:100%; display:block}
 .tokens li.has-color{gap:8px}
 .tokens li.has-color > .left{display:flex;align-items:center;gap:8px}
 
+/* Downloadables list spacing */
+.download-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.download-list li .btn{width:100%; text-align:left}
+
 .principle h3{font-family:var(--font-display);font-size:var(--size-h2);margin:.2em 0 .4em}
 
 .type-specimens{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);align-items:start}
