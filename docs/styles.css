@@ -105,7 +105,7 @@ img{max-width:100%; display:block}
 .btn:hover{transform:translateY(-1px)}
 .btn:active{transform:translateY(0)}
 .btn.primary{background:var(--brand);border-color:color-mix(in oklab, var(--brand) 50%, black);color:#1F1F1F}
-.btn.ghost{background:transparent}
+.btn.ghost{background:transparent}\n/* Hover state for ghost buttons: adopt accent/brand color */\n.btn.ghost:hover{background:var(--brand);border-color:color-mix(in oklab, var(--brand) 50%, black);color:#1F1F1F}
 .btn.danger{background:#EF4444;border-color:#ef444480;color:white}
 .btn.small{padding:6px 10px;border-radius:10px;font-size:14px}
 
